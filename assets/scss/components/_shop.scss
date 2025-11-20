@@ -1,0 +1,28 @@
+.shop {
+    margin-top: 50px;
+    background-color: #fff;
+    width: 100%;
+    
+    .shop-container {
+        text-align: center;
+        // display: flex;
+        padding: 20px 3%;
+
+        .shop-box {
+            width: 100%;
+            
+            h1 {
+                font-size: 60px;
+                font-weight: 600;
+                color: #832c2c;
+                padding-bottom: 20px;
+            }
+
+            iframe {
+                border-radius: 30px;
+                height: 300px;
+                width: 100%;
+            }
+        }
+    }
+}

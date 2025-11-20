@@ -1,0 +1,84 @@
+.home {
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+
+    .home-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        
+        .home-box {
+            display: flex;
+            align-items: center;
+            // background-color: salmon;
+            width: 100%;
+            height: 100%;
+            
+            .home-box-content {
+                padding: 20px 10%;
+            }
+
+            .home-box-content-img {
+                background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../images/1.png");
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                // background-color: #760000;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 20px;
+                    // height: 100%;
+                }
+            }
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 600;
+            color: #832c2c;
+            // line-height: 70px;
+        }
+
+        p {
+            padding: 30px 0;
+            max-width: 500px;
+        }
+
+        .home-button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .button-more {
+                background-color: #760000;
+                color: #fff;
+                border: 1.5px #760000 solid;
+                padding: 11.5px 30px;
+                border-radius: 50px;
+                transition: all 300ms ease-in-out;
+
+
+                &:hover {
+                    background-color: #a10000;
+                }
+            }
+
+            .button-home-contact {
+                border: 1.5px #760000 solid;
+                padding: 11.5px 30px;
+                border-radius: 50px;
+                color: #760000;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    color: #fff;
+                    background-color: #760000;
+                }
+            }
+        }
+    }
+}

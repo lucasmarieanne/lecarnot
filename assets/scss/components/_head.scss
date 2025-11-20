@@ -1,0 +1,93 @@
+header {
+    position: fixed;
+    width: 100%;
+    
+    .header-container {
+        padding: 25px;
+        // background-color: #760000;
+        // background-color: saddlebrown;
+        
+        .header-bg {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            // width: 100%;
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        .header-logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            // background-color: rgb(84, 41, 36);
+
+
+            a {
+                color: #760000;
+                font-weight: 600;
+            }
+        }
+    
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            text-align: center;
+
+            // background-color: rgb(150, 74, 65);
+
+
+            .nav-list {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+    
+                li {
+                    a {
+                        color: #760000;
+                        // text-transform: uppercase;
+                    }
+
+                    .button-contact {
+                        background-color: #760000;
+                        padding: 10px 30px;
+                        border-radius: 50px;
+                        color: #fff;
+                        transition: all 300ms ease-in-out;
+
+                        &:hover {
+                            background-color: #a10000;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-contact {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+
+            // background-color: salmon;
+            ul, li {
+                .button-contact {
+                    background-color: #760000;
+                    padding: 10px 30px;
+                    border-radius: 50px;
+                    color: #fff;
+                    transition: all 300ms ease-in-out;
+
+                    &:hover {
+                        background-color: #a10000;
+                    }
+                }
+            }
+        }
+    }
+}
