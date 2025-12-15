@@ -1,51 +1,76 @@
 .home {
-    display: flex;
-    justify-content: flex-start;
     height: 100vh;
 
     .home-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        
-        .home-box {
+        height: 100%;
+        overflow: hidden;
+
+        .home-box.left {
             display: flex;
             align-items: center;
-            // background-color: salmon;
+            height: 100%;
+        }
+
+        .home-box.right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: #a10000;
+        }
+
+        .home-right-card {
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-right-image {
+            width: 100%;
+            height: 100%;
+            background-image:
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url("../images/1.png");
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .home-box {
             width: 100%;
             height: 100%;
             
             .home-box-content {
-                padding: 20px 10%;
-            }
-
-            .home-box-content-img {
-                background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../images/1.png");
-                background-position: center;
-                background-size: cover;
+                padding: 0px 10%;
                 width: 100%;
-                height: 100%;
-                // background-color: #760000;
-
-                img {
-                    object-fit: cover;
-                    width: 100%;
-                    border-radius: 20px;
-                    // height: 100%;
-                }
             }
         }
 
         h1 {
             font-size: 70px;
-            font-weight: 600;
-            color: #832c2c;
-            // line-height: 70px;
+            // color: #832c2c;
         }
 
-        p {
+        span {
+            font-size: 70px;
+            color: #b83b3b;
+            font-family: "DM Serif Text", serif;
+        }
+
+        .home-box-content-text {
+            max-width: 600px;
             padding: 30px 0;
-            max-width: 500px;
+
+            p {
+                &:nth-child(2) {
+                    margin-top: 10px;
+                }
+            }
         }
 
         .home-button {
@@ -53,30 +78,101 @@
             align-items: center;
             gap: 15px;
 
-            .button-more {
-                background-color: #760000;
-                color: #fff;
-                border: 1.5px #760000 solid;
-                padding: 11.5px 30px;
-                border-radius: 50px;
-                transition: all 300ms ease-in-out;
+            .home-button-more {
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
 
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    // background-color: #b83b3b;
+                    background-color: #411616;
+                    padding: 10px 10px 10px 30px;
+                    border-radius: 50px;
+                    transition: all 300ms ease-in-out;
+                    
+                    &:hover {
+                        background-color: #6f0e0e;
+                    }
 
-                &:hover {
-                    background-color: #a10000;
+                    p {
+                        color: #fff;
+                    }
+
+                    .home-button-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        background-color: #832c2c;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
                 }
             }
 
+            .home-button-contact {
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    // background-color: #b83b3b;
+                    border: 1.5px #b83b3b solid;
+                    padding: 8.5px 8.5px 8.5px 30px;
+                    border-radius: 50px;
+                    transition: all 300ms ease-in-out;
+                    
+                    &:hover {
+                        background-color: #b83b3b;
+
+                        p {
+                            color: #fff;
+                        }
+                    }
+
+                    p {
+                        color: #b83b3b;
+                        transition: all 300ms ease-in-out;
+                    }
+
+                    .home-button-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        background-color: #df6262;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            
+
             .button-home-contact {
-                border: 1.5px #760000 solid;
-                padding: 11.5px 30px;
+                border: 1.5px #832c2c solid;
+                padding: 13.5px 30px;
                 border-radius: 50px;
-                color: #760000;
+                color: #832c2c;
                 transition: all 300ms ease-in-out;
 
                 &:hover {
                     color: #fff;
-                    background-color: #760000;
+                    background-color: #832c2c;
                 }
             }
         }

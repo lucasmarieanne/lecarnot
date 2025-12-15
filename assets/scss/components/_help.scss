@@ -1,0 +1,62 @@
+.help {
+    padding: 0 3%; 
+    
+    .help-container {
+        background-color: #f4f1f1;
+        border-radius: 30px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+      .help-content {
+            padding: 60px 40px;
+
+            .help-content-title {
+                margin-bottom: 20px;
+                
+                h1,h2 {
+                    font-size: 40px;
+                }
+            }
+
+
+            .help-contact-button {
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: #b83b3b;
+                    padding: 10px 10px 10px 30px;
+                    border-radius: 50px;
+                    transition: all 300ms ease-in-out;
+                    
+                    &:hover {
+                        background-color: #a10000;
+                    }
+
+                    p {
+                        color: #fff;
+                    }
+
+                    .help-contact-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        background-color: #df6262;
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

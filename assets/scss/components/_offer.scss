@@ -1,0 +1,142 @@
+.offer {
+    padding: 80px 3%;
+
+    .offer-title {
+        text-align: center;
+
+        h1 {
+            // color: #832c2c;
+            color: #411616;
+            font-size: 60px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: #6d6d6d;
+            font-style: italic;
+        }
+    }
+
+    .offer-container {
+                        margin-top: 100px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 100px;
+
+                        .offer-box {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            align-items: center;
+                        }
+                        
+                        .offer-card.image {
+                            width: 100%;
+                            // height: 100%;
+                            border-radius: 30px;
+    
+                            img {
+                                width: 100%;
+                                height: 400px;
+                                object-fit: cover;
+                                border-radius: 30px;
+                            }
+                        }
+    
+                        .offer-card {
+                            &.padding {
+                                padding: 0 10%;
+                            }
+
+                            .offer-card-title {
+                                margin-bottom: 30px;
+
+                                .offer-card-top-title {
+                                    margin-bottom: 10px;
+                                    color: #6d6d6d;
+                                    font-style: italic;
+                                }
+
+                                h3 {
+                                    font-size: 40px;
+                                }
+                            }
+    
+    
+                            .offer-card-text {
+                                
+                                .offer-card-textp {
+                                    margin-top: 20px;
+                                    display: flex;
+                                    gap: 5px;
+                                    align-items: center;
+                                }
+
+                                .offer-button {
+                                    margin-top: 40px;
+                                    display: flex;
+                                    justify-content: flex-start;
+
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        background-color: #411616;
+                                        padding: 10px 10px 10px 30px;
+                                        border-radius: 50px;
+                                        transition: all 300ms ease-in-out;
+                                        
+                                        &:hover {
+                                            background-color: #6f0e0e;
+                                        }
+
+                                        p {
+                                            color: #411616;
+                                            color: #fff;
+                                            transition: all 300ms ease-in-out;
+                                        }
+
+                                        .offer-button-icon {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            height: 30px;
+                                            width: 30px;
+                                            border-radius: 50%;
+                                            background-color: #832c2c;
+
+                                            i {
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .offer-button2 {
+                                    margin-top: 20px;
+
+                                    a {
+                                        display: inline-flex;
+                                        gap: 5px;
+
+                                        &:hover p {
+                                            text-decoration: none;
+                                        }
+                                        
+                                        p {
+                                            text-decoration: underline;
+                                            color: #832c2c;
+                                            font-weight: 500;
+                                        }
+
+                                        .offer-button-icon {
+                                            i {
+                                                font-size: 12px;
+                                                color: #832c2c;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+}

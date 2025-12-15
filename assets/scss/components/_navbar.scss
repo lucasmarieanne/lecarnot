@@ -1,0 +1,120 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    // background-color: #fff;
+    z-index: 100;
+    
+    .header-container {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        padding: 20px 5%;
+        // background-color: #760000;
+        // background-color: saddlebrown;
+
+        .header-logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 20%;
+            
+            .header-logo-link {
+                background-color: #fff;
+                color: #832c2c;
+                font-weight: 600;
+                padding: 15px;
+                border-radius: 25px;
+            }
+        }
+    
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            text-align: center;
+            // background-color: rgb(150, 74, 65);
+            
+            .nav-list {
+                padding: 15px;
+                border-radius: 50px;
+                background-color: #fff;
+                display: flex;
+                gap: 25px;
+                align-items: center;
+    
+                li {
+                    a {
+                        color: #832c2c;
+                        padding: 15px 0;
+                        font-weight: 500;
+                        transition: all 300ms ease-in-out;
+                    }
+                }
+            }
+
+            .nav-list a {
+                transition: filter 300ms ease-in-out, opacity 300ms ease-in-out;
+            }
+
+            .nav-list:hover a {
+                filter: blur(2px);
+                opacity: 0.4; /* optionnel pour renforcer l'effet */
+            }
+
+            .nav-list a:hover {
+                filter: blur(0);     /* Le lien survolé n'est pas flou */
+                opacity: 1;          /* On le rend bien visible */
+            }
+        }
+
+        .nav-contact {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 20%;
+
+            // background-color: salmon;
+            ul, li {
+                .nav-contact-button {
+                    // margin-top: 40px;
+                    display: flex;
+                    justify-content: center;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background-color: #b83b3b;
+                        padding: 10px 10px 10px 30px;
+                        border-radius: 50px;
+                        transition: all 300ms ease-in-out;
+                        
+                        &:hover {
+                            background-color: #a10000;
+                        }
+
+                        p {
+                            color: #fff;
+                        }
+
+                        .nav-contact-icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 50%;
+                            background-color: #df6262;
+
+                            i {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

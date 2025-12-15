@@ -1,0 +1,188 @@
+.big-container {
+    .offer-assurance {
+        .offer-assurance-container {
+            padding-top: 150px;
+
+            .offer-assurance-title {
+                text-align: start;
+                padding: 0 5%;
+
+                h1 {
+                    font-size: 60px;
+                    // color: #832c2c;
+                    color: #411616;
+                }
+    
+                h2 {
+                    font-size: 40px;
+                    font-weight: 500;
+                    // color: #b83b3b;
+                    color: #411616;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                    color: #6d6d6d;
+                    font-style: italic;
+                }
+            }
+
+            .offer-assurance-grid {
+                padding-top: 100px;
+
+                .offer-assurance-grid-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    background-color: #411616;
+                    padding: 80px 5%;
+
+                    .offer-assurance-grid-title {
+
+                        p {
+                            margin-bottom: 10px;
+                            opacity: .7;
+                            font-style: italic;
+                        }
+
+                        h3 {
+                            font-size: 40px;
+                            color: #fff;
+                        }
+                    }
+
+
+                    p {
+                        max-width: 800px;
+                        margin-top: 15px;
+                        color: #fff;
+
+                    }
+
+                    .offer-assurance-grid-flex {
+                        margin-top: 50px;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-gap: 20px;
+
+                        .offer-assurance-grid-box {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            background-color: #fff;
+                            background-color: #4d2424;
+                            border-radius: 30px;
+                            padding: 30px;
+
+                            .offer-assurance-grid-icon {
+                                // display: flex;
+                                // align-items: center;
+                                // justify-content: center;
+                                // height: 30px;
+                                // width: 30px;
+                                // border-radius: 50%;
+                                // background-color: #65ad4f;
+
+                                i {
+                                    color: #fff;
+                                    font-size: 25px;
+                                    margin-left: -3px;
+                                }
+                            }
+
+                            h4 {
+                                margin-top: 15px;
+                                font-size: 20px;
+                                color: #fff;
+                            }
+
+                            p {
+                                margin-top: 10px;
+                                text-align: start;
+                                color: #fff;
+                                opacity: .7;
+                            }
+                        }
+                    }
+                }
+
+                .offer-assurance-box {
+                    padding: 100px 3%;
+
+                    .offer-assurance-box-title {
+                        text-align: center;
+
+                        p {
+                            margin-bottom: 10px;
+                            color: #6d6d6d;
+                            font-style: italic;
+                        }
+
+                        h5 {
+                            font-size: 40px;
+                        }
+
+                    }
+
+
+                    .offer-assurance-box-container {
+                        margin-top: 100px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 100px;
+
+                        .offer-assurance-box-wrapper {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            align-items: center;
+                        }
+                        
+                        .offer-assurance-card.image {
+                            width: 100%;
+                            // height: 100%;
+                            border-radius: 30px;
+    
+                            img {
+                                width: 100%;
+                                height: 400px;
+                                object-fit: cover;
+                                border-radius: 30px;
+                            }
+                        }
+    
+                        .offer-assurance-card {
+                            &.padding {
+                                padding: 0 10%;
+                            }
+
+                            .offer-assurance-card-title {
+                                margin-bottom: 30px;
+
+                                .offer-assurance-card-top-title {
+                                    margin-bottom: 10px;
+                                    color: #6d6d6d;
+                                    font-style: italic;
+                                }
+
+                                h3 {
+                                    font-size: 40px;
+                                }
+                            }
+    
+    
+                            .offer-assurance-card-text {
+                                
+                                .offer-assurance-card-textp {
+                                    margin-top: 20px;
+                                    display: flex;
+                                    gap: 5px;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

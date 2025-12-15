@@ -1,0 +1,62 @@
+.soon {
+    padding: 60px;
+    text-align: center;
+
+    h1 {
+        font-size: 60px;
+        color: #832c2c;
+    }
+
+    span {
+        font-size: 60px;
+        color: #b83b3b;
+        font-family: "DM Serif Text", serif;
+
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    
+    .soon-container {
+        padding-top: 80px;
+
+        .soon-box {
+            display: flex;
+            align-items: center;
+            border-radius: 30px;
+
+            img {
+                width: 100%;
+                border-radius: 30px;
+            }
+        }
+
+        .soon-box-left, .soon-box-right {
+            width: 50%;
+            // background-color: red;
+        }
+
+        .soon-box-right {
+
+            i {
+                font-size: 60px;
+                color: #b83b3b;
+            }
+
+            h2 {
+                font-size: 60px;
+                color: #832c2c;
+            }
+
+            .subtitle {
+                margin-top: 20px;
+            }
+
+            p {
+                
+            }
+        }
+    }
+}

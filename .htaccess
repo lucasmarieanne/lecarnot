@@ -1,0 +1,62 @@
+RewriteEngine On
+
+# ----------------------------------------------------------------------------
+# 🔥 AUTO-DETECTION : LOCAL vs PRODUCTION
+# ----------------------------------------------------------------------------
+
+RewriteCond %{HTTP_HOST} ^localhost [NC,OR]
+RewriteCond %{HTTP_HOST} ^127\.0\.0\.1 [NC]
+RewriteRule ^ - [E=ENVIRONMENT:local]
+
+RewriteRule ^ - [E=ENVIRONMENT:production]
+
+# ----------------------------------------------------------------------------
+# 🔥 BASE PATH automatiques
+# ----------------------------------------------------------------------------
+
+RewriteCond %{ENV:ENVIRONMENT} =local
+RewriteRule ^ - [E=BASE_PATH:/projets-web/website-nicolas-sohier]
+
+RewriteCond %{ENV:ENVIRONMENT} =production
+RewriteRule ^ - [E=BASE_PATH:/]
+
+# ----------------------------------------------------------------------------
+# 🚫 Interdire l'accès direct à certains dossiers/fichiers PHP
+# ----------------------------------------------------------------------------
+
+# Interdit l'accès direct aux pages et composants (doivent passer par index.php)
+RewriteRule ^(pages|components)/ - [F,L]
+
+# Interdire accès fichiers sensibles
+<FilesMatch "\.(env|ini|log|bak|sql|sh|config\.php)$">
+    Require all denied
+</FilesMatch>
+
+# Désactiver l'indexation des dossiers
+Options -Indexes
+
+# ----------------------------------------------------------------------------
+# 🛡️ Headers de sécurité (à adapter si besoin)
+# ----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Active uniquement si ton site est en HTTPS en prod :
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# ----------------------------------------------------------------------------
+# 🔥 ROUTING
+# ----------------------------------------------------------------------------
+
+# Si URL vide → charger la home via index.php
+RewriteRule ^$ index.php?page=home [L]
+
+# Laisser passer fichiers existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Router PHP
+RewriteRule ^([a-zA-Z0-9-_]+)/?$ index.php?page=$1 [QSA,L]
