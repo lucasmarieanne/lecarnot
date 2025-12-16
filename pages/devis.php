@@ -39,7 +39,7 @@
                                     <i class="fa-regular fa-comment"></i>
                                 </div>
 
-                                <p>Votre devis</p>
+                                <p>Mon devis</p>
 
                             </div>
                             <div class="step-bulle">
@@ -119,14 +119,25 @@
                         <!-- Étape 2 -->
                         <div class="form-step" data-step="2">
                             <p class="text-step">Étape 2/4</p>
-                            <h2>Votre devis (gratuit)</h2>
+                            <h2>Mon devis (gratuit)</h2>
 
                             <div class="form-step-input space">
                                 <label for="">Choisissez votre demande de devis <span>*</span></label>
-                                <select name="" id="" class="form-step-select-bg">
-                                    <option value="">Devis gratuit - Assurance</option>
-                                    <option value="">Devis gratuit - Alarme (Homiris)</option>
+                                <select name="devis" class="form-step-select-bg" required>
+                                    
+                                    <option value="">Sélectionnez un devis</option>
+                                    
+                                    <option value="assurance-emprunteur">Devis gratuit - Assurance emprunteur</option>
+                                    <option value="mrpro">Devis gratuit - Multirisque professionnelle</option>
+                                    <option value="prevoyance">Devis gratuit - Prévoyance & Santé</option>
+                                    <option value="retraite">Devis gratuit - Retraite</option>
+                                    
+                                    <option value="" disabled>--------------------------------------------</option>
+                                    
+                                    <option value="alarme">Devis gratuit - Alarme (Homiris)</option>
                                 </select>
+                                
+                                <small class="input-error"></small>
                             </div>
 
                             <div class="form-step-input">
@@ -226,11 +237,14 @@
 
                         <!-- Étape 5 Traitement -->
                         <div class="form-step" data-step="5">
-                            <p class="text-step">Message</p>
-                            <h2>En cours d'envoi</h2>
+                            <p class="text-step">Traitement de votre demande</p>
 
-                            <p>Message</p>
-                            
+                            <h2>Envoi en cours...</h2>
+
+                            <p>
+                                Nous transmettons actuellement votre demande à nos équipes.<br>
+                                Merci de patienter quelques instants.
+                            </p>
                         </div>
                         
                         <!-- Étape 6 Confirmation -->

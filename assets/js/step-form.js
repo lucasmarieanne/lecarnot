@@ -113,6 +113,51 @@ step1Inputs.forEach(input => {
     });
 });
 
+/* ---------------------------
+   VALIDATION ÉTAPE 2
+--------------------------- */
+const step2 = document.querySelector('.form-step[data-step="2"]');
+const step2Select = step2.querySelector('select[name="devis"]');
+const step2NextBtn = step2.querySelector('.next');
+
+let step2Submitted = false;
+
+/* Bouton désactivé par défaut */
+step2NextBtn.classList.add('disabled');
+
+function validateStep2(showErrors = false) {
+    let isValid = true;
+
+    const wrapper = step2Select.closest('.form-step-input');
+    const errorEl = wrapper.querySelector('.input-error');
+
+    if (step2Select.value === '') {
+        isValid = false;
+
+        if (showErrors) {
+            wrapper.classList.add('error');
+            errorEl.textContent = 'Veuillez sélectionner une option';
+        }
+    } else {
+        wrapper.classList.remove('error');
+        errorEl.textContent = '';
+    }
+
+    /* Bouton suivant */
+    if (isValid) {
+        step2NextBtn.classList.remove('disabled');
+    } else {
+        step2NextBtn.classList.add('disabled');
+    }
+
+    return isValid;
+}
+
+/* Validation live (après tentative uniquement) */
+step2Select.addEventListener('change', () => {
+    validateStep2(step2Submitted);
+});
+
 
 /* ---------------------------
    GESTION DES ÉTAPES
@@ -145,13 +190,16 @@ const MAX_MANUAL_STEP = 3; // étapes 1 → 4
 nextBtns.forEach(btn => {
     btn.addEventListener("click", () => {
 
-        // Étape 1 : tentative de passage
+        /* Étape 1 */
         if (currentStep === 0) {
             step1Submitted = true;
+            if (!validateStep1(true)) return;
+        }
 
-            if (!validateStep1(true)) {
-                return;
-            }
+        /* Étape 2 */
+        if (currentStep === 1) {
+            step2Submitted = true;
+            if (!validateStep2(true)) return;
         }
 
         if (currentStep < MAX_MANUAL_STEP) {

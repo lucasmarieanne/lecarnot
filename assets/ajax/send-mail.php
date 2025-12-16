@@ -34,7 +34,19 @@ try {
     $nom     = $_POST['nom']     ?? '';
     $email   = $_POST['email']   ?? '';
     $tel     = $_POST['tel']     ?? '';
+    $devis = $_POST['devis'] ?? '';
     $message = $_POST['message'] ?? '';
+
+    $devisLabels = [
+        'assurance-emprunteur' => 'Devis gratuit - Assurance emprunteur',
+        'mrpro'                => 'Devis gratuit - Multirisque professionnelle',
+        'prevoyance'           => 'Devis gratuit - Prévoyance & Santé',
+        'retraite'             => 'Devis gratuit - Retraite',
+        'alarme'               => 'Devis gratuit - Alarme (Homiris)',
+    ];
+
+    $devisValue = $_POST['devis'] ?? '';
+    $devisLabel = $devisLabels[$devisValue] ?? 'Non renseigné';
 
     // Sujet & contenu
     $mail->Subject = 'Nouvelle demande de devis';
@@ -42,10 +54,21 @@ try {
     $mail->isHTML(true);
     $mail->Body = "
         <h2>Nouvelle demande de devis</h2>
-        <p><strong>Nom :</strong> {$prenom} {$nom}</p>
+
+        <p><strong>Client :</strong> {$prenom} {$nom}</p>
+
         <p><strong>Email :</strong> {$email}</p>
+
         <p><strong>Téléphone :</strong> {$tel}</p>
-        <p><strong>Message :</strong><br>{$message}</p>
+
+        <p><strong>Type de devis :</strong> {$devisLabel}</p><br>
+
+        <blockquote style='border-left: 3px solid #b83b3b; padding-left: 10px; color: #333;'>
+            <em>\"".nl2br(htmlspecialchars($message))."\"</em>
+        </blockquote><br>
+
+        <hr>
+        <p style='font-size:12px;color:#666;'>Ce message vous est envoyé automatiquement depuis le site [NOM DU SITE].</p>
     ";
 
     // 📎 Pièces jointes

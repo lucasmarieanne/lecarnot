@@ -179,6 +179,45 @@
                                     align-items: center;
                                 }
                             }
+
+                            .offer-assurance-button {
+                                margin-top: 40px;
+                                display: flex;
+                                justify-content: flex-start;
+
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    // background-color: #b83b3b;
+                                    background-color: #411616;
+                                    padding: 10px 10px 10px 30px;
+                                    border-radius: 50px;
+                                    transition: all 300ms ease-in-out;
+                                    
+                                    &:hover {
+                                        background-color: #6f0e0e;
+                                    }
+
+                                    p {
+                                        color: #fff;
+                                    }
+
+                                    .offer-assurance-button-icon {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        height: 30px;
+                                        width: 30px;
+                                        border-radius: 50%;
+                                        background-color: #832c2c;
+
+                                        i {
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }

@@ -1,15 +1,17 @@
+// submit-form.js
+
 document.getElementById('multiStepForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const form = this;
     const formData = new FormData(form);
 
-    const filesInput = document.getElementById('files');
-    if (filesInput && filesInput.files.length > 0) {
-        Array.from(filesInput.files).forEach(file => {
-            formData.append('files[]', file);
-        });
-    }
+    // const filesInput = document.getElementById('files');
+    // if (filesInput && filesInput.files.length > 0) {
+    //     Array.from(filesInput.files).forEach(file => {
+    //         formData.append('files[]', file);
+    //     });
+    // }
 
     // 👉 Étape 5 : Traitement (immédiat)
     document.querySelector('.steps').classList.add('processing-mode');

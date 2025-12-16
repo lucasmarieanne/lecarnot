@@ -348,63 +348,81 @@ header .header-container .nav-contact ul .nav-contact-button a .nav-contact-icon
 }
 
 .services {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   padding: 3%;
   background-color: #fff;
+}
+.services .services-title {
+  text-align: center;
+}
+.services .services-title p {
+  margin-bottom: 10px;
+  color: #6d6d6d;
+  font-style: italic;
+}
+.services .services-title h1 {
+  color: #411616;
+  font-size: 60px;
 }
 .services .service-bg {
   padding: 80px 40px;
   background-color: #f4f1f1;
   border-radius: 30px;
 }
-.services .service-title {
+.services .service-bg-title {
   text-align: center;
 }
-.services .service-title h1 {
+.services .service-bg-title h1 {
   color: #832c2c;
   font-size: 60px;
 }
-.services .service-title p {
-  margin: 20px 0 40px 0;
+.services .service-bg-title p {
   color: #832c2c;
   font-size: 18px;
+  font-style: italic;
+  margin-top: 10px;
 }
 .services .service-container {
+  margin-top: 40px;
+}
+.services .service-container .service-container-title h2 {
+  font-size: 30px;
+  color: #832c2c;
+}
+.services .service-container .service-container-title p {
+  color: #832c2c;
+  font-style: italic;
+  margin-top: 10px;
+}
+.services .service-container .service-container-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
   max-width: 1200px;
-  margin: auto;
+  margin: 60px auto;
   border-radius: 15px;
-  padding: 10px;
-  background-color: #fff;
 }
 .services .service-container .service-box {
   background-color: #fff;
   padding: 30px;
+  border-radius: 30px;
 }
-.services .service-container .service-box:nth-child(1) {
-  border-right: 1px solid rgba(131, 44, 44, 0.2);
-}
-.services .service-container .service-box:nth-child(3) {
-  border-left: 1px solid rgba(131, 44, 44, 0.2);
-}
-.services .service-container .service-box:nth-child(4) {
-  border-right: 1px solid rgba(131, 44, 44, 0.2);
-  border-top: 1px solid rgba(131, 44, 44, 0.2);
-}
-.services .service-container .service-box:nth-child(5) {
-  border-top: 1px solid rgba(131, 44, 44, 0.2);
-}
-.services .service-container .service-box:nth-child(6) {
-  border-left: 1px solid rgba(131, 44, 44, 0.2);
-  border-top: 1px solid rgba(131, 44, 44, 0.2);
-}
-.services .service-container .service-box .service-icon {
-  color: red !important;
+.services .service-container .service-box .service-box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  background-color: #4d2424;
+  background-color: #b83b3b;
+  border-radius: 50%;
 }
 .services .service-container .service-box i {
-  color: #fff;
   color: #832c2c;
-  font-size: 30px;
+  color: #fff;
+  font-size: 20px;
 }
 .services .service-container .service-box h1 {
   margin: 20px 0;
@@ -414,6 +432,24 @@ header .header-container .nav-contact ul .nav-contact-button a .nav-contact-icon
 }
 .services .service-container .service-box p {
   color: #fff;
+  color: #832c2c;
+}
+.services .service-container .service-box .service-box-button {
+  margin-top: 40px;
+}
+.services .service-container .service-box .service-box-button a {
+  display: inline-flex;
+  gap: 5px;
+}
+.services .service-container .service-box .service-box-button a:hover p {
+  text-decoration: underline;
+}
+.services .service-container .service-box .service-box-button a p {
+  color: #832c2c;
+  font-weight: 500;
+}
+.services .service-container .service-box .service-box-button a .service-box-button-icon i {
+  font-size: 12px;
   color: #832c2c;
 }
 .services .service-button {
@@ -884,6 +920,38 @@ footer .footer-bottom .footer-bottom-content .footer-bottom-legal a:hover {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+.big-container .offer-assurance .offer-assurance-container .offer-assurance-grid .offer-assurance-box .offer-assurance-box-container .offer-assurance-card .offer-assurance-button {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+.big-container .offer-assurance .offer-assurance-container .offer-assurance-grid .offer-assurance-box .offer-assurance-box-container .offer-assurance-card .offer-assurance-button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #411616;
+  padding: 10px 10px 10px 30px;
+  border-radius: 50px;
+  transition: all 300ms ease-in-out;
+}
+.big-container .offer-assurance .offer-assurance-container .offer-assurance-grid .offer-assurance-box .offer-assurance-box-container .offer-assurance-card .offer-assurance-button a:hover {
+  background-color: #6f0e0e;
+}
+.big-container .offer-assurance .offer-assurance-container .offer-assurance-grid .offer-assurance-box .offer-assurance-box-container .offer-assurance-card .offer-assurance-button a p {
+  color: #fff;
+}
+.big-container .offer-assurance .offer-assurance-container .offer-assurance-grid .offer-assurance-box .offer-assurance-box-container .offer-assurance-card .offer-assurance-button a .offer-assurance-button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #832c2c;
+}
+.big-container .offer-assurance .offer-assurance-container .offer-assurance-grid .offer-assurance-box .offer-assurance-box-container .offer-assurance-card .offer-assurance-button a .offer-assurance-button-icon i {
+  color: #fff;
 }
 
 .help {

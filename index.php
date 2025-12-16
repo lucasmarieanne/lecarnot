@@ -23,7 +23,8 @@ $routes = [
     'faq'       => 'faq.php',
     'produits'  => 'products.php',
     'assurance' => 'offer-assurance.php',
-    'mondevis'     => 'devis.php',
+    'alarme'    => 'offer-alarme.php',
+    'mondevis'  => 'devis.php',
 ];
 
 // --------------------------------------------------------

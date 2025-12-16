@@ -12,7 +12,7 @@
 
             <div class="help-contact-button">
                 <a href="<?= url('mondevis') ?>">
-                    <p>Demander mon devis gratuit</p>
+                    <p>Demander un devis gratuit</p>
                     
                     <div class="help-contact-icon">
                         <i class="fa-solid fa-angle-right"></i>
